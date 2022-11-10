@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 
 input_values = [1, 2, 3, 4, 5]  # числовая последовательность по оси Х
 squares = [1, 4, 9, 16, 25]  # значения кривой
-plt.style.use('classic')  # подключение стиля seaborn
+plt.style.use('classic')  # подключение стиля classic
 fig, ax = plt.subplots()
 # ax.plot(squares)
 ax.plot(input_values, squares, linewidth=3)  # представление графика (толщина кривой 3)
