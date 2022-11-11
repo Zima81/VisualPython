@@ -12,20 +12,20 @@ class RandomWalk():
         self.x_values = [0]
         self.y_values = [0]
 
-    def fill_walk(self):
+    def get_step(self):
         """Вычисляет все точки блуждания"""
+        # определение направления и длинны перемещения
+        direction = choice([1, -1])
+        distance = choice([0, 1, 2, 3, 4])
+        step = direction * distance
+        return step
 
+    def fill_walk(self):
         # Шаги генерируются до достижения нужной длинны
         while len(self.x_values) < self.num_points:
 
-            # определение нароаления и длинны перемещения
-            x_direction = choice([1, -1])
-            x_distance = choice([0, 1, 2, 3, 4])
-            x_step = x_direction * x_distance
-
-            y_direction = choice([1, -1])
-            y_distance = choice([0, 1, 2, 3, 4])
-            y_step = y_direction * y_distance
+            x_step = self.get_step()
+            y_step = self.get_step()
 
             # Отклонение нулевых перемещений
             if x_step == 0 and y_step == 0:
