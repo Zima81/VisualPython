@@ -24,6 +24,4 @@ ax.bar(range(2, max_result+1), frequency)
 plt.show()
 
 
-#plt.show()
-
 
